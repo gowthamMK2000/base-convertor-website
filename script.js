@@ -84,3 +84,24 @@
       document.getElementById("decimal").value="";
     }
   }
+ function tochar(){
+   var x=document.getElementById("char").value;
+   x=x.charCodeAt(0);
+   document.getElementById("ascii").value=x;
+ }
+ function toascii() {
+   var x=document.getElementById("ascii").value;
+   x=String.fromCharCode(x);
+   document.getElementById("char").value=x;
+ }
+ function checkascii() {
+   var x=document.getElementById("ascii").value;
+   if(x>=0 && x<=126)
+   {
+     document.getElementById("button2").disabled=false;
+   }
+   else {
+     document.getElementById("button2").disabled=true;
+     document.getElementById("ascci").value="";
+   }
+ }

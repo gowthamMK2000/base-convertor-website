@@ -1,19 +1,42 @@
 function todeci_comp() {
   var x=document.getElementById("decimal").value;
+  var length=document.getElementById("bits").value;
   x=parseInt(x,10);
-  var y=x.toString(2);
-  if(y.length<4)
-   y="0"+y;
-   y=y.split("");
-   for (var i = 0; i < y.length; i++) {
-      if(y[i]=="0")
-      {    y[i]="1";   }
+  x=x.toString(2);
+  x=bit_correction(x,length);
+   x=x.split("");
+   for (var i = 0; i < x.length; i++) {
+      if(x[i]=="0"){
+        x[i]="1";
+      }
       else {
-        y[i]="0";
+        x[i]="0";
       }
    }
-   y=y.toString();
-   y=y.replace(/,/g,"");
-  document.getElementById("1s_comp").value=y;
-  document.getElementById("2s_comp").value=x.toString(2);
+   x=x.toString();
+   x=x.replace(/,/g,"");
+   x=bit_correction(x,length);
+   document.getElementById("1s_comp").value=x;
+   x=parseInt(x,2);
+   var y=parseInt(1,2);
+   x=x.toString(10);
+   y=y.toString(10);
+   x=parseInt(x,10);
+   y=parseInt(y,10);
+   var z=x+y;
+   z=z.toString(2);
+   z=bit_correction(z,length);
+  document.getElementById("2s_comp").value=z;
+}
+function bit_correction(x,length){
+  if(length>=x.length){
+   length=length-x.length;
+  }
+  else {
+    alert("invalid bits value");
+    length=0;
+  }
+  for(var j=1;j<=length;j++)
+   x="0"+x;
+  return x;
 }

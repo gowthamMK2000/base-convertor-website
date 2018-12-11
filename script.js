@@ -84,3 +84,33 @@
       document.getElementById("decimal").value="";
     }
   }
+ function tochar(){
+   var x=document.getElementById("char").value;
+   x=x.charCodeAt(0);
+   document.getElementById("ascii").value=x;
+ }
+ function toascii() {
+   var x=document.getElementById("ascii").value;
+   x=String.fromCharCode(x);
+   document.getElementById("char").value=x;
+ }
+ function checkascii() {
+   var x=document.getElementById("ascii").value;
+   if(x>=0 && x<=126)
+   {
+     document.getElementById("button2").disabled=false;
+   }
+   else {
+     document.getElementById("button2").disabled=true;
+     document.getElementById("ascii").value="";
+     alert("invalid ascii value");
+   }
+ }
+ function todeci_comp() {
+   var x=document.getElementById("decimal").value;
+   x=parseInt(x,10);
+   //var y;
+   x=~x;
+   //y=x.toString(2);
+   document.getElementById("1s_comp").value=x;
+ }

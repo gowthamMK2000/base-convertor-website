@@ -1,9 +1,13 @@
 function todeci_comp() {
   var x=document.getElementById("decimal").value;
   var length=document.getElementById("bits").value;
-  x=parseInt(x,10);
-  x=x.toString(2);
-  x=bit_correction(x,length);
+  var radio1= document.getElementById("Radio1").checked;
+  var radio2= document.getElementById("Radio2").checked;
+  if(radio1==true){
+    x=parseInt(x,10);
+    x=x.toString(2);
+    x=bit_correction(x,length);
+  }
   x=x.split("");
   for (var i = 0; i < x.length; i++) {
       if(x[i]=="0"){
@@ -16,6 +20,7 @@ function todeci_comp() {
    x=x.toString();
    x=x.replace(/,/g,"");
    x=bit_correction(x,length);
+   length=x.length;
    document.getElementById("1s_comp").value=x;
    x=parseInt(x,2);
    var y=parseInt(1,2);
@@ -33,7 +38,7 @@ function bit_correction(x,length){
    length=length-x.length;
   }
   else {
-    alert("invalid bits value");
+    document.getElementById("bits").value=x.length;
     length=0;
   }
   for(var j=1;j<=length;j++)

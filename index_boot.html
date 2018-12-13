@@ -1,35 +1,41 @@
-<DOCTYPE !html>
+<!doctype html>
 <html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script type="text/javascript" src="script.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>base convertor</title>
+    <title>BASE CONVERTOR</title>
     <script type="text/javascript" src="script.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light  " style="background-color:#ea8282 ">
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color:#ea8282">
   <a class="navbar-brand" href="#">BASE CONVERTOR</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link " href="index_boot.html">Home </a>
+    <div class="navbar-nav ml-auto ">
+      <a class="nav-item nav-link active" href="index_boot.html">Home <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href=complement.html>complement</a>
-      <a class="nav-item nav-link active" href="ascii-unicode.html">ascii <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="ascii-unicode.html">ascii</a>
     </div>
   </div>
   </nav>
-  <div class="container"  style="padding-top:50px">
-    <label for="char">CHARACTER</label>
-    <input type="text"  id="char"  class="form-control" >
-      <button onclick="tochar()" name="convert" id="button1" class="btn btn-default">convert</button><br>
-      <label for="ascii">ASCII</label>
-      <input type="text"  id="ascii" oninput="checkascii()" class="form-control">
-        <button onclick="toascii()" name="convert" id="button2" class="btn btn-default">convert</button><br>
+<div class="container"  style="padding-top:50px">
+  <label for="binary">Binary</label>
+  <input type="text"  id="binary" oninput="checkbi()" class="form-control" >
+    <button onclick="tobinary()" name="convert" id="button1" class="btn btn-default">convert</button><br>
+    <label for="decimal">Decimal</label>
+    <input type="text" size="63" id="decimal" oninput="checkdeci()" class="form-control">
+    <button onclick="todecimal()" name="convert" id="button2" class="btn btn-default">convert</button><br>
+    <label for="octal">Octal</label>
+  <input type="text" size="63" id="octal" oninput="checkoctal()" class="form-control">
+  <button onclick="tooctal()" name="convert" id="button3" class="btn btn-default">convert</button><br>
+  <label for="hexa">Hexa-decimal</label>
+  <input type="text" size="63" id="hexa" class="form-control" >
+  <button onclick="tohexa()" name="convert" class="btn btn-default">convert</button><br>
   </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -17,22 +17,31 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto ">
-      <a class="nav-item nav-link " href="index.html">Home </a>
+      <a class="nav-item nav-link " href="index_boot.html">Home </a>
       <a class="nav-item nav-link active" href=complement.html>complement <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link " href="ascii-unicode.html">ascii </a>
     </div>
   </div>
   </nav>
     <div  class="container " style="padding-top:50px">
-      <label for="decimal">DECIMAL</label>
-      <input type="text"  id="decimal"  class="form-control" >
+
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="Radio1" name="Radio" class="custom-control-input">
+        <label class="custom-control-label" for="Radio1">DECIMAL</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="Radio2" name="Radio" class="custom-control-input" >
+        <label class="custom-control-label" for="Radio2">BINARY</label>
+      </div>
+
+      <input type="text"  value="" id="decimal"  class="form-control" >
         <button onclick="todeci_comp()" name="convert" id="button1" class="btn btn-default">convert</button><br>
       <label for="1s_comp">1's COMPLEMENT</label>
       <input type="text"  id="1s_comp"  class="form-control" >
     <label for="2s_comp">2'S CCOMPLEMENT</label>
     <input type="text"  id="2s_comp"  class="form-control" >
     <label for="bits">NO OF BITS </label>
-    <input type="number"  id="bits"  class="form-control" >
+    <input type="number" value="1" min="1" id="bits"  class="form-control" >
   </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

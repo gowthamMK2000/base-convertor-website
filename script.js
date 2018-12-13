@@ -44,44 +44,37 @@
   }
   function checkbi(){
     var x=document.getElementById("binary").value;
-    x=Number(x);
-    x=x%10;
-    if(x!=0 && x!=1)
+    var y=x.charAt(x.length-1);
+    //x=x%10;
+    if(y!=0 && y!=1)
     {  alert("not a binary value");
-      document.getElementById("button1").disabled=true;
-      document.getElementById("binary").value="";
+      document.getElementById("binary").value=x.slice(0,x.length-2);
       //document.getElementsByName('text').value="";
     }
     else {
-      document.getElementById("button1").disabled=false;
     }
   }
   function checkoctal(){
     var x=document.getElementById("octal").value;
-    x=Number(x);
-    x=x%10;
-    if(x>=0 && x<=7)
-    {  document.getElementById("button3").disabled=false;
+    var y=x.charAt(x.length-1);
+    if(y>=0 && y<=7)
+    {
 
     }
     else {
            alert("not a octal value");
-          document.getElementById("button3").disabled=true;
-          document.getElementById("octal").value="";
+           document.getElementById("octal").value=x.slice(0,x.length-2);
     }
   }
   function checkdeci(){
     var x=document.getElementById("decimal").value;
-    x=Number(x);
-    x=x%10;
-    if(x>=0 && x<=9)
+    var y=x.charAt(x.length-1);
+    if(y>=0 && y<=9)
     {
-      document.getElementById("button2").disabled=false;
     }
     else {
       alert("not a decimal value");
-      document.getElementById("button2").disabled=true;
-      document.getElementById("decimal").value="";
+      document.getElementById("decimal").value=x.slice(0,x.length-2);
     }
   }
  function tochar(){
@@ -105,12 +98,4 @@
      document.getElementById("ascii").value="";
      alert("invalid ascii value");
    }
- }
- function todeci_comp() {
-   var x=document.getElementById("decimal").value;
-   x=parseInt(x,10);
-   //var y;
-   x=~x;
-   //y=x.toString(2);
-   document.getElementById("1s_comp").value=x;
  }

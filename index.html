@@ -12,33 +12,70 @@
     <script type="text/javascript" src="script.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light " style="background-color:#ea8282">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color:#ea8282; ">
   <a class="navbar-brand" href="#">BASE CONVERTOR</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+    <div class="navbar-nav  ml-auto ">
+      <a class="nav-item nav-link active" href="index_boot.html">Home <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href=complement.html>complement</a>
       <a class="nav-item nav-link" href="ascii-unicode.html">ascii</a>
+
+    <div class="nav-item dropdown" >
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          code conversion
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color:#ea8282">
+          <a class="dropdown-item" href="binary-BCD.html">binary-bcd</a>
+          <a class="dropdown-item" href="binary-excess3.html">binary-ecxess3</a>
+        </div>
+      </div>
     </div>
   </div>
   </nav>
-<div class="container"  style="padding-top:50px">
+<div class="container  mt-3 w-75 p-3  " >
+  <div class="container bg-2">
+    <label for="input">input</label>
+  <div class="input-group">
+    <div class="input-group-prepend">
+   <select id="input" class="form-control custom-select">
+      <option value="2">binary</option>
+      <option value="10">decimal</option>
+      <option value="8">octal</option>
+      <option value="16">hexa</option>
+    </select>
+  </div>
+  <input type="text" size="63" id="input_text" class="form-control " >
+  </div>
+    <label for="output">output</label>
+    <div class="input-group">
+      <div class="input-group-append">
+   <select id="output" class="form-control custom-select">
+      <option value="2">binary</option>
+      <option value="10">decimal</option>
+      <option value="8">octal</option>
+      <option value="16">hexa</option>
+    </select>
+  </div>
+    <input type="text" size="63" id="output_text"  class="form-control">
+  </div>
+    <button onclick="toconvert()" name="convert" id="button2" class="btn btn-default mt-2" data-toogle="button">convert</button><br>
+<!--
   <label for="binary">Binary</label>
   <input type="text"  id="binary" oninput="checkbi()" class="form-control" >
-    <button onclick="tobinary()" name="convert" id="button1" class="btn btn-default">convert</button><br>
+    <button  onclick="tobinary()" name="convert" id="button1" class="btn btn-default mt-2 mb-3">convert</button><br>
     <label for="decimal">Decimal</label>
     <input type="text" size="63" id="decimal" oninput="checkdeci()" class="form-control">
-    <button onclick="todecimal()" name="convert" id="button2" class="btn btn-default">convert</button><br>
+    <button onclick="todecimal()" name="convert" id="button2" class="btn btn-default mt-2 mb-3">convert</button><br>
     <label for="octal">Octal</label>
   <input type="text" size="63" id="octal" oninput="checkoctal()" class="form-control">
-  <button onclick="tooctal()" name="convert" id="button3" class="btn btn-default">convert</button><br>
+  <button onclick="tooctal()" name="convert" id="button3" class="btn btn-default mt-2 mb-3">convert</button><br>
   <label for="hexa">Hexa-decimal</label>
   <input type="text" size="63" id="hexa" class="form-control" >
-  <button onclick="tohexa()" name="convert" class="btn btn-default">convert</button><br>
-  </div>
+  <button onclick="tohexa()" name="convert" class="btn btn-default mt-2 mb-3">convert</button><br>
+</div>-->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

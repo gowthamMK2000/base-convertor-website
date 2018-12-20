@@ -1,4 +1,18 @@
-  function tobinary() {
+function toconvert(){
+  var x=document.getElementById("input").value;
+  x=parseInt(x,10);
+  var y=document.getElementById("output").value;
+  y=parseInt(y,10);
+  var input=document.getElementById("input_text").value;
+  input=parseInt(input,x);
+  var output=input.toString(y);
+  document.getElementById("output_text").value=output;
+
+}
+
+
+
+function tobinary() {
     var x=document.getElementById("binary").value;
     x=parseInt(x,2);
     var y;

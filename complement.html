@@ -20,6 +20,15 @@
       <a class="nav-item nav-link " href="index_boot.html">Home </a>
       <a class="nav-item nav-link active" href=complement.html>complement <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link " href="ascii-unicode.html">ascii </a>
+      <div class="nav-item dropdown" >
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            code conversion
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color:#ea8282">
+            <a class="dropdown-item" href="binary-BCD.html">binary-bcd</a>
+            <a class="dropdown-item" href="binary-excess3.html">binary-ecxess3</a>
+          </div>
+        </div>
     </div>
   </div>
   </nav>
@@ -35,7 +44,7 @@
       </div>
 
       <input type="text"  value="" id="decimal"  class="form-control" >
-        <button onclick="todeci_comp()" name="convert" id="button1" class="btn btn-default">convert</button><br>
+      <button onclick="todeci_comp()" name="convert" id="button1" class="btn btn-default">convert</button><br>
       <label for="1s_comp">1's COMPLEMENT</label>
       <input type="text"  id="1s_comp"  class="form-control" >
     <label for="2s_comp">2'S CCOMPLEMENT</label>

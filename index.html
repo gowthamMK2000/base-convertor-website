@@ -4,82 +4,149 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="baseconvertor">
-    <meta name="description" content="base conversion |convert ascii  to char and viceversa |find complement ">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>BASE CONVERTOR</title>
+    <link rel="stylesheet" href="layout_css.css">
+    <!--font-->
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Amiko' rel='stylesheet'>
+    <title>home</title>
+    <style>
+    /*h{
+      font-size: 1rem;
+    }
+    @include media-breakpoint-up(sm){{
+       h1{
+        font-size: 1.1rem;
+      }
+    }
+    @include media-breakpoint-up(md) {
+      font-size: 1.4rem;
+      }
+      h1{
+          font-size: 2rem;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      h1{
+        font-size: 5.9rem;
+      }
+
+      h1{
+        font-size: 5rem;
+      }
+    }*/
+    </style>
     <script type="text/javascript" src="script.js"></script>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color:#ea8282; ">
-  <a class="navbar-brand" href="#">BASE CONVERTOR</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav  ml-auto ">
-      <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href=complement.html>complement</a>
-      <a class="nav-item nav-link" href="ascii-unicode.html">ascii</a>
-
-    <div class="nav-item dropdown" >
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          code conversion
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color:#ea8282">
-          <a class="dropdown-item" href="binary-BCD.html">binary-bcd</a>
-          <a class="dropdown-item" href="binary-excess3.html">binary-ecxess3</a>
+  <body >
+    <header>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-primary">
+    <a class="navbar-brand pr-3" href="#">Base Convertor</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active pl-3">
+          <a class="nav-link" href="index.html">Home <spn class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item pl-3">
+          <a class="nav-link" href="baseconversion.html">Base convertor</a>
+        </li>
+        <li class="nav-item pl-3">
+          <a class="nav-link" href="complement.html">Complement</a>
+        </li>
+        <li class="nav-item pl-3">
+          <a class="nav-link" href="ascii-unicode.html">Ascii</a>
+        </li>
+        <li class="nav-item dropdown pl-3">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            code conversion
+          </a>
+          <div class="dropdown-menu" ria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">BCD</a>
+            <a class="dropdown-item" href="#">Excess-3</a>
+            <a class="dropdown-item" href="#">Gray code</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="view intro">
+    <div class="container title h-100 w-100">
+    <div class="full-bg-img">
+      <div class="mask rgba-black-light flex-center">
+        <div class="container text-center white-text">
+          <div class="white-text text-center wow fadeInUp">
+            <h1 class="mt-4 ">BASE CONVERTOR</h1>
+            <h5 class="my-2">convert as you wish</h5>
         </div>
       </div>
     </div>
+    </div>
   </div>
-  </nav>
-<div class="container  mt-3 w-75 p-3  " >
-  <div class="container bg-2">
-    <label for="input">input</label>
-  <div class="input-group">
-    <div class="input-group-prepend">
-   <select id="input" class="form-control custom-select">
-      <option value="2">binary</option>
-      <option value="10">decimal</option>
-      <option value="8">octal</option>
-      <option value="16">hexa</option>
-    </select>
+</div>
+</header>
+<div class="conntainer mt-2" >
+<div class=" card  text-center">
+  <div class="card-body ">
+    <p>There are only 10 types of people in  the world,one who understands binary other who doesn't
+                                        -unknown
+    </p>
   </div>
-  <input type="text" size="63" id="input_text" class="form-control " >
+</div>
+</div>
+<div class="container w-75 " >
+<div class=" row mt-2">
+  <div class="card  col-md-5 my-2  ">
+    <div class="card-body">
+      <h5 class="card-title">Base Convertor</h5>
+      <p class="card-text">text</p>
+      <a href="#" class="btn btn-primary">convert</a>
+    </div>
   </div>
-    <label for="output">output</label>
-    <div class="input-group">
-      <div class="input-group-append">
-   <select id="output" class="form-control custom-select">
-      <option value="2">binary</option>
-      <option value="10">decimal</option>
-      <option value="8">octal</option>
-      <option value="16">hexa</option>
-    </select>
+  <span class="col-md-2"></span>
+  <div class="card col-md-5 my-2 " >
+    <div class="card-body">
+      <h5 class="card-title">Complement</h5>
+      <p class="card-text">text</p>
+      <a href="#" class="btn btn-primary">convert</a>
+    </div>
   </div>
-    <input type="text" size="63" id="output_text"  class="form-control">
+</div>
+</div>
+
+<div class="container  w-75 ">
+  <div class="row mt-2 ">
+<div class="  card  col-md-5 my-2 " style="height:rem">
+  <div class="card-body">
+    <h5 class="card-title">Ascii</h5>
+    <p class="card-text">text</p>
+    <a href="#" class="btn btn-primary ">convert</a>
   </div>
-    <button onclick="toconvert()" name="convert" id="button2" class="btn btn-default mt-2" data-toogle="button">convert</button><br>
-<!--
-  <label for="binary">Binary</label>
-  <input type="text"  id="binary" oninput="checkbi()" class="form-control" >
-    <button  onclick="tobinary()" name="convert" id="button1" class="btn btn-default mt-2 mb-3">convert</button><br>
-    <label for="decimal">Decimal</label>
-    <input type="text" size="63" id="decimal" oninput="checkdeci()" class="form-control">
-    <button onclick="todecimal()" name="convert" id="button2" class="btn btn-default mt-2 mb-3">convert</button><br>
-    <label for="octal">Octal</label>
-  <input type="text" size="63" id="octal" oninput="checkoctal()" class="form-control">
-  <button onclick="tooctal()" name="convert" id="button3" class="btn btn-default mt-2 mb-3">convert</button><br>
-  <label for="hexa">Hexa-decimal</label>
-  <input type="text" size="63" id="hexa" class="form-control" >
-  <button onclick="tohexa()" name="convert" class="btn btn-default mt-2 mb-3">convert</button><br>
-</div>-->
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</div>
+<span class="col-md-2"></span>
+<div class=" card col-md-5 my-2 " style="height:rem">
+  <div class="card-body">
+    <h5 class="card-title">Code conversion</h5>
+    <p class="card-text">text</p>
+    <a href="#" class="btn btn-primary">convert</a>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="containerhead mt-2 w-100 bg-dark p-3 footer">
+  2018-2019
+</div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
-</html>
+  </html>

@@ -1,0 +1,81 @@
+p {
+  font-family: "Armata";
+}
+h1{
+  font-family:"Audiowide";
+  font-size: 220%;
+}
+.title{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+h5{
+  font-family:"Armata";
+  font-size: 110%;
+}
+a{
+  font-family: "Amiko";/*aldrich-*/
+}
+.navbar{
+  background-color: black;
+}
+.navbar a{
+  color:black;
+  font-weight: bold;
+
+}
+.nav-item:hover{
+  font-weight: bold;
+
+}
+.dropdown-menu{
+  margin: 0px;
+  background-color: #3093db;
+  color: black;
+  padding-bottom: 1px;
+}
+.dropdown-menu a:hover{
+  background: #7ca3e7;
+}
+.intro {
+            background: url("binarycodeimg.jpg")no-repeat center center;
+            background-blend-mode: overlay;
+            background-color:##23384b;
+            background-size: cover;
+            color:white;
+
+
+        }
+        html,
+        body,
+        header,
+        .view {
+          height: 100%;
+        }
+.containerhead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer{
+  color: white;
+}
+
+@include media-breakpoint-up(sm) {
+   h1{
+    font-size: 1.1rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  h1 {
+    font-size: 1.4rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}

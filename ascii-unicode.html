@@ -6,39 +6,68 @@
     <script type="text/javascript" src="script.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>base convertor</title>
+    <link rel="stylesheet" href="layout_css.css">
+    <title>ascii-unicode</title>
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Amiko' rel='stylesheet'>
     <script type="text/javascript" src="script.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light  " style="background-color:#ea8282 ">
-  <a class="navbar-brand" href="#">BASE CONVERTOR</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link " href="index.html">Home </a>
-      <a class="nav-item nav-link" href=complement.html>complement</a>
-      <a class="nav-item nav-link active" href="ascii-unicode.html">ascii <span class="sr-only">(current)</span></a>
-      <div class="nav-item dropdown" >
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light bg-primary">
+    <a class="navbar-brand pr-3" href="#">Base Convertor</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ">
+        <li class="nav-item  pl-3">
+          <a class="nav-link" href="index.html">Home </a>
+        </li>
+        <li class="nav-item pl-3">
+          <a class="nav-link" href="baseconversion.html">Base convertor</a>
+        </li>
+        <li class="nav-item pl-3">
+          <a class="nav-link" href="complement.html">Complement</a>
+        </li>
+        <li class="nav-item active pl-3">
+          <a class="nav-link" href="ascii-unicode.html">Ascii<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown pl-3">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             code conversion
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color:#ea8282">
-            <a class="dropdown-item" href="binary-BCD.html">binary-bcd</a>
-            <a class="dropdown-item" href="binary-excess3.html">binary-ecxess3</a>
+          <div class="dropdown-menu" ria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">BCD</a>
+            <a class="dropdown-item" href="#">Excess-3</a>
+            <a class="dropdown-item" href="#">Gray code</a>
           </div>
-        </div>
+        </li>
+      </ul>
     </div>
-  </div>
   </nav>
-  <div class="container"  style="padding-top:50px">
+  <div class="containerhead mt-3 pt-3" >
+    <h2 class="">ASCII CONVERSION</h2>
+  </div>
+  <div class="container w-75"  style="padding-top:50px">
     <label for="char">CHARACTER</label>
     <input type="text"  id="char"  class="form-control" >
-      <button onclick="tochar()" name="convert" id="button1" class="btn btn-default">convert</button><br>
-      <label for="ascii">ASCII</label>
+      <button onclick="tochar()" name="convert" id="button1" class="btn btn-primary mt-1">convert</button><br>
+      <label for="ascii" class="mt-3">ASCII</label>
       <input type="text"  id="ascii" oninput="checkascii()" class="form-control">
-        <button onclick="toascii()" name="convert" id="button2" class="btn btn-default">convert</button><br>
+        <button onclick="toascii()" name="convert" id="button2" class="btn btn-primary mt-1">convert</button><br>
+  </div>
+  <div class="container w-75 mt-5 ">
+    <h4>Note</h4>
+    <ul class="list-styled">
+    <li class="lead">select the input format from input drop-down list box</li>
+    <li class="lead">Enter the input  value</li>
+    <li class="lead">select the output format from output drop-down list box</li>
+    <li class="lead">click on convert</li>
+  </ul>
+  </div>
+  <div class="containerhead  w-100 bg-dark p-3 footer">
+    2018-2019
   </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
